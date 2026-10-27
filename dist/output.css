@@ -953,6 +953,10 @@ video {
     gap: 4rem;
   }
 
+  .md\:gap-14 {
+    gap: 3.5rem;
+  }
+
   .md\:bg-transparent {
     background-color: transparent;
   }
