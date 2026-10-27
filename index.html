@@ -5,35 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grocify</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./dist/output.css" rel="stylesheet">
 </head>
-
-<body class="bg-[url('images/image.png')] bg-center bg-cover">
-    <div class="container px-4 pt-5 m-auto min-h-screen relative">
-        <nav class="flex flex-col gap-y-7 items-center md:flex-row">
+<body class="min-h-screen bg-center bg-cover" style="background-image: url('images/image.png');">
+    <div class="container px-4 pt-5 m-auto min-h-screen relative flex flex-col">
+        <nav class="flex justify-between items-center">
             <img src="images/logo.png" alt="" class="w-40 cursor-pointer">
-            <ul class="flex-1 flex justify-center gap-4 lg:gap-16">
-                <li class="list-none"><a href="#" class="no-underline text-white px-2">Home</a></li>
-                <li class="list-none"><a href="#" class="no-underline text-white px-2">About</a></li>
-                <li class="list-none"><a href="#" class="no-underline text-white px-2">Features</a>
+            <ul id="nav-menu"
+                class="fixed top-20 w-3/5 -right-full p-6 z-10 h-full backdrop-blur-2xl bg-slate-900/30 flex flex-col gap-6 rounded duration-500 md:static md:p-0 md:gap-16 md:bg-transparent md:flex-row md:backdrop-blur-none">
+                <li class="list-none"><a href="#"
+                        class="no-underline text-white px-2 hover:text-yellow-300 duration-500">Home</a></li>
+                <li class="list-none"><a href="#"
+                        class="no-underline text-white px-2  hover:text-yellow-300 duration-500">About</a></li>
+                <li class="list-none"><a href="#"
+                        class="no-underline text-white px-2  hover:text-yellow-300 duration-500">Features</a>
                 </li>
-                <li class="list-none"><a href="#" class="no-underline text-white px-2">Contact</a>
+                <li class="list-none"><a href="#"
+                        class="no-underline text-white px-2  hover:text-yellow-300 duration-500">Contact</a>
                 </li>
             </ul>
             <img src="images/cart.png" alt="" class="w-8 cursor-pointer">
+            <button id="burger-menu" class="p-2 text-white focus:outline-none md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
         </nav>
-        <div class="text-white mt-14 font-semibold leading-normal max-w-xl md:mt-48">
+        <div class="text-white mt-14 font-semibold leading-normal max-w-xl md:mt-48 grow">
             <h1 class="text-5xl sm:text-6xl ">Groceries<br>delivery in <span class="font-light">15 mins</span></h1>
-            <p class="text-sm font-light">Grocify offer a wide range of products, including fresh products, meats, dairy, baked goods and
+            <p class="text-sm font-light">Grocify offer a wide range of products, including fresh products, meats,
+                dairy, baked goods and
                 non-perishable items.</p>
             <div class="mt-10">
-                <a href="#" class="bg-yellow-300 text-indigo-950 border border-transparent rounded-3xl py-3 px-5 sm:px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border">Oreder Now</a>
+                <a href="#"
+                    class="bg-yellow-300 text-indigo-950 border border-transparent rounded-3xl py-3 px-5 sm:px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border">Oreder
+                    Now</a>
                 <a href="#">Download App <span class="text-lg inline-block rotate-90">&#10148;</span></a>
             </div>
         </div>
         <img src="images/grocery-image.png" class="w-full xl:w-1/2 xl:absolute bottom-0 right-20">
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
