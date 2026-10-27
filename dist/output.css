@@ -949,10 +949,6 @@ video {
     flex-direction: row;
   }
 
-  .md\:gap-16 {
-    gap: 4rem;
-  }
-
   .md\:gap-14 {
     gap: 3.5rem;
   }
